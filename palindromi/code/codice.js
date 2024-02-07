@@ -36,7 +36,7 @@ function()
 )
 
 
-
+//  funzione - nome - valore da inserire 
 function iswordpalindrome(word)
 {
     let invsertword="";
