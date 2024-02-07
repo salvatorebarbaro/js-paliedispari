@@ -10,14 +10,26 @@
 // Creare una funzione per capire se la parola inserita è palindroma
         // -funzione che partira dal fondo e copiera la parola al contrario
 
-
+// aggiunto evento al bottone
 document.querySelector("button").addEventListener("click",
 function()
 {
+    document.getElementById("risultato").innerText=``
+
     // dichiarazione parola utente
     const userword = document.getElementById("userwords").value;
     console.log(userword);
     
+    // condizione che implica la unzione giu 
+    if(iswordpalindrome(userword))
+    {
+        document.getElementById("risultato").innerText=`La parola è palindroma!!`
+
+    }
+    else
+    {
+        document.getElementById("risultato").innerText=`La parola non è palindroma`
+    } 
 
 
 }
@@ -27,10 +39,10 @@ function()
 
 function iswordpalindrome(word)
 {
-    let invsertword=0
+    let invsertword="";
 
-    // i=lunghezza parola, i maggiore uguale di 0 e sarà i-- perchè sto andando a ritroso nella parola
-    for(i=length.word;i>=0;i--)
+    // i=lunghezza parola -1 (perchè indici array partono da 0), i maggiore uguale di 0 e sarà i-- perchè sto andando a ritroso nella parola
+    for(i=word.length - 1;i>=0;i--)
     {
         // inserisco carattere in invertword uguale al carattere su cui è la i nel ciclo sulla mia parola 
         invsertword += word[i];
